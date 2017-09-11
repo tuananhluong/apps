@@ -31,8 +31,7 @@ There are many apps in Apple Store, this site implement a suggest plugin for eas
     │   ├── _index.html           # Hompage search
     │   └── _history.html         # History page
 	├── css                       # Style preprocessed
-	│   │   
-	│	├── style.css             # Main stylesheet
+    │   ├── style.css             # Main stylesheet	
     │   └── common.css            # Common stylesheet
     ├── data                      # Default data for demo
 	├── img                       # Images
