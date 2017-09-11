@@ -84,7 +84,7 @@ function getListPopular() {
             appsMap = sortJSON(appsMap, 'times', 'desc')
             var listAppsPopular = [];
             for (var i = 0; i < appsMap.length; i++) {
-                if (i <= 6) {
+                if (i <= 5) {
                     var appId = appsMap[i].id;
                     var times = appsMap[i].times;
 

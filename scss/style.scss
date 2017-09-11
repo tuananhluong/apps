@@ -84,7 +84,7 @@ section.section-content {
     h1 {
         font-size: 2.857em;
         margin-bottom: 10px;
-        color: $gray800;
+        color: $gray600;
     }
     #search {
         width: 50%;
@@ -295,4 +295,52 @@ footer.section-footer {
     margin-top: 10px;
     display: inline-block;
     color: $gray;
+}
+
+// Media query
+@media screen and (max-width: 960px) {
+    html:before {
+        font-size: 5em;
+        position: absolute;
+        opacity: 0.1;
+    }
+    .logo {
+        margin: 3px 15px;
+    }
+    .menu li {
+        min-width: 100px;
+    }
+    #search-box #search {
+        width: 94%;
+    }
+    #search-box h1 {
+        font-size: 1.6em;
+    }
+    .heading-title {
+        font-size: 1.2em;
+        padding: 0 4%;
+    }
+    .list-apps {
+        padding: 0 4%;
+        display: inline-block;
+    }
+    .footer-info .col-3 {
+        width: 46%;
+        margin: 15px 2%;
+    }
+    ul.copyright {
+        margin: 0 15px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+    .list-apps ul li {
+        width: 14%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .list-apps ul li {
+        width: 27%;
+    }
 }
