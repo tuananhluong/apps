@@ -1,0 +1,298 @@
+@import 'common';
+
+/*!
+ * Main CSS
+ * Last-modified: 07092017
+ */
+
+body {
+    background: $gray400;
+    font-size: $primaryFont;
+}
+
+
+/* Header */
+
+.section-topnav {
+    background: $black;
+    height: 40px;
+    line-height: 40px;
+    color: $white;
+    float: left;
+    width: 100%;
+}
+
+.logo-icon {
+    font-size: 2em;
+    float: left;
+}
+
+.logo-title {
+    border-left: 1px solid $gray;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.section-menu {
+    background: $gray200;
+    height: 45px;
+    float: left;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    li {
+        min-width: 150px;
+        text-align: center;
+        line-height: 45px;
+        border-left: 1px solid $gray300;
+        float: left;
+    }
+    li:last-child {
+        border-right: 1px solid $gray300;
+    }
+    li:hover {
+        background: $gray;
+    }
+    li.active {
+        background: $green600;
+        a {
+            color: $white;
+        }
+    }
+    li a {
+        text-decoration: none;
+        color: 000;
+        font-size: 0.929em;
+        font-weight: 600;
+    }
+}
+
+
+/*  Content */
+
+section.section-content {
+    float: left;
+    width: 100%;
+}
+
+#search-box {
+    text-align: center;
+    margin: 50px 0;
+    h1 {
+        font-size: 2.857em;
+        margin-bottom: 10px;
+        color: $gray800;
+    }
+    #search {
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+    }
+    #search input {
+        width: 100%;
+        border: 1px solid $gray600;
+        padding: 10px 10px;
+        @include borderRadius(2px);
+        @include boxShadow(2px 2px 5px rgba(0, 0, 0, .1));
+    }
+    .search-btn {
+        display: block;
+        float: right;
+        height: 37px;
+        width: 120px;
+        background: $green600;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include borderRadius(0 2px 2px 0);
+        line-height: 37px;
+        font-weight: 500;
+        color: $white;
+        cursor: pointer;
+    }
+    .search-btn:hover {
+        opacity: 0.9;
+    }
+}
+
+.heading-title {
+    margin-left: 10px;
+}
+
+.list-apps ul {
+    padding: 0;
+    li {
+        width: 10.866666%;
+        padding: 2%;
+        float: left;
+        background: $white;
+        margin: 0 0.8% 10px 0.8%;
+        border: 1px solid $white;
+        cursor: pointer;
+        @include boxShadow(2px 2px 5px rgba(0, 0, 0, .1));
+        min-height: 180px;
+        text-align: center;
+    }
+    li:hover {
+        @include boxShadow(2px 2px 5px rgba(0, 0, 0, .25));
+        a {
+            color: $green600;
+        }
+        img {
+            opacity: 0.9;
+        }
+    }
+    li a {
+        text-decoration: none;
+        color: $black600;
+        img {
+            width: 90%;
+            @include borderRadius(20px);
+        }
+        span {
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 10px;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}
+
+#search-result {
+    position: absolute;
+    width: 100%;
+    max-height: 400px;
+    display: block;
+    border: 1px solid $gray;
+    background: $white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 10;
+    display: none;
+    transition: transform 0.3s ease;
+    @include boxShadow(2px 2px 5px rgba(0, 0, 0, .1));
+    ul {
+        padding: 0;
+        li {
+            width: 100%;
+            display: inline-block;
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px dashed $gray600;
+            border-top: 1px dashed $gray600;
+            position: relative;
+            img {
+                width: 50px;
+                margin-right: 10px;
+                @include borderRadius(10px);
+            }
+            span {
+                position: absolute;
+                top: 25px;
+                font-weight: bold;
+                font-size: 12px;
+                color: $black600;
+                .hight-light {
+                    color: $green600;
+                }
+            }
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        li:hover {
+            background: #f1f1f1;
+            cursor: pointer;
+        }
+        li.row-active {
+            background: #f1f1f1;
+        }
+    }
+    p {
+        float: left;
+        padding: 10px;
+        color: #8bc34a;
+    }
+}
+
+#search-result.open {
+    display: block;
+}
+
+
+/* Footer */
+
+footer.section-footer {
+    background: $white;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px 0;
+    ul {
+        padding: 0;
+    }
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    .footer-info ul li {
+        margin-bottom: 5px;
+        a {
+            color: $gray800;
+        }
+    }
+    ul li a {
+        text-decoration: none;
+        color: $black;
+    }
+    ul li a:hover {
+        text-decoration: underline;
+    }
+    ul.copyright {
+        float: right;
+        margin-top: 50px;
+        li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+}
+
+#list-app-history ul {
+    padding: 0;
+    li {
+        display: inline-block;
+        width: 100%;
+        padding: 20px 10px;
+        background: $white;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+    .app-thumbnail {
+        float: left;
+        margin-right: 15px;
+        img {
+            @include borderRadius(20px);
+        }
+    }
+    .app-info a {
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 12px;
+        color: $green600;
+    }
+}
+
+.list-apps ul li a+span {
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+    color: $gray;
+}
